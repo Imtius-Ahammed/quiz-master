@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Header = () => {
   return (
     <div>
@@ -13,7 +14,7 @@ const Header = () => {
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-sky-100 rounded-box w-52">
         <li><Link to='/'>Home</Link></li>
         <li tabIndex={0}>
-          <Link to='/topics' className="justify-between">
+          <Link to='/' className="justify-between">
             Topics
           
           </Link>
@@ -28,7 +29,7 @@ const Header = () => {
     <ul className="menu menu-horizontal p-0">
       <li><Link to='/'>Home</Link></li>
       <li tabIndex={0}>
-        <Link to='/topics'>
+        <Link to='/'>
           Topics
           
         </Link>
@@ -41,6 +42,7 @@ const Header = () => {
     <Link to='/blog' className="btn border-0 text-black hover:text-white bg-sky-300">Blog</Link>
   </div>
 </div>
+
       
     </div>
   );
