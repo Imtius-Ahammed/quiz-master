@@ -1,11 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Main from './layout/Main';
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path:'/',
+      element:<Main></Main>
+    }
+  ])
   return (
     <div className="App">
-      <h1 className='text-3xl font-bold p-5'>Welcome to My project</h1>
-  
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
