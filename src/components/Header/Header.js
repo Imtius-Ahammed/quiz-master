@@ -14,7 +14,7 @@ const Header = () => {
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-sky-100 rounded-box w-52">
         <li><Link to='/'>Home</Link></li>
         <li tabIndex={0}>
-          <Link to='/' className="justify-between">
+          <Link to='/topics' className="justify-between">
             Topics
           
           </Link>
@@ -29,7 +29,7 @@ const Header = () => {
     <ul className="menu menu-horizontal p-0">
       <li><Link to='/'>Home</Link></li>
       <li tabIndex={0}>
-        <Link to='/'>
+        <Link to='/topics'>
           Topics
           
         </Link>
