@@ -11,7 +11,7 @@ const Home = () => {
   
   return (
     <div>
-      <section className="bg-sky-200 text-black body-font">
+      <section className="bg-sky-200 text-black body-font ">
   <div className="container px-5 py-24 mx-auto flex flex-col">
     <div className="lg:w-4/6 mx-auto">
       <div className="rounded-lg h-64 overflow-hidden">
@@ -50,7 +50,7 @@ const Home = () => {
       
      
       
-      <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2  gap-10  m-10'>
+      <div className='w-4/5 lg:w-full container mx-auto  grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2  gap-10 m-10'>
       {
         qzTopics.map(quiz=><HomeDetails key={quiz.id} quiz={quiz}></HomeDetails>)
       }

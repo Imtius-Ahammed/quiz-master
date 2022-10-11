@@ -10,7 +10,7 @@ const HomeDetails = ({quiz}) => {
   
   return (
     <div>
-      <div className=" border p-3 card card-compact w-96 shadow-xl">
+      <div className=" border  card card-compact w-80 shadow-xl">
   <figure><img className='bg-blue-100 ' src={logo} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">{name}</h2>
