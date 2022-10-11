@@ -33,7 +33,7 @@ function App() {
       
         {
           path:'*',
-          element:<div>Topics not Found</div>
+          element:<div className='text-3xl font-bold bg-red-600 p-10'>Topics not Found</div>
         },
         {
           path:'/statistics',

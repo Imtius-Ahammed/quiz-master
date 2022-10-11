@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import HomeDetails from '../HomeDetails/HomeDetails';
 import img from '../../banner.jpg'
+import img1 from '../../my.jpg'
 
 const Home = () => {
   const allQuiz = useLoaderData();
@@ -10,7 +11,7 @@ const Home = () => {
   
   return (
     <div>
-      <section className="bg-sky-200 text-gray-600 body-font">
+      <section className="bg-sky-200 text-black body-font">
   <div className="container px-5 py-24 mx-auto flex flex-col">
     <div className="lg:w-4/6 mx-auto">
       <div className="rounded-lg h-64 overflow-hidden">
@@ -19,10 +20,7 @@ const Home = () => {
       <div className="flex flex-col sm:flex-row mt-10">
         <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
           <div className="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10" viewBox="0 0 24 24">
-              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
+            <img className='rounded-full' src={img1} alt=''></img>
           </div>
           <div className="flex flex-col items-center text-center justify-center">
             <h2 className="font-medium title-font mt-4 text-gray-900 text-lg">Md: Imtius Ahammed</h2>
@@ -47,11 +45,11 @@ const Home = () => {
       
 
    
-    <div className='bg-sky-50 p-10' >
+    <div className='bg-sky-100 p-10' >
 
       
      
-      <h1>THis is Home : {qzTopics.length} </h1>
+      
       <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2  gap-10  m-10'>
       {
         qzTopics.map(quiz=><HomeDetails key={quiz.id} quiz={quiz}></HomeDetails>)

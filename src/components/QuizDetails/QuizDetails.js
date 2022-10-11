@@ -11,7 +11,7 @@ const QuizDetails = ({qs}) => {
   
   const [show, setShow] = useState('');
   const showAnswer=()=>{
-    setShow(<h3 className='text-3xl font-bold  bg-sky-100 py-3 rounded-lg text-red-400'> Answer: {correctAnswer} </h3>);
+    setShow(<h3 className='text-3xl font-bold  bg-sky-200 py-3 rounded-lg text-red-400'> <small> Answer: </small> {correctAnswer} </h3>);
 
   }
 
