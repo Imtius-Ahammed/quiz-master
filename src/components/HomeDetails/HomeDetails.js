@@ -3,6 +3,7 @@ import { ArrowRightIcon } from '@heroicons/react/24/solid'
 import { Link } from 'react-router-dom';
 
 const HomeDetails = ({quiz}) => {
+  
   const{name,logo,id} = quiz;
   
   
