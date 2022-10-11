@@ -7,6 +7,7 @@ const Home = () => {
   const allQuiz = useLoaderData();
   const qzTopics = allQuiz.data;
   
+  
   return (
     <div >
      

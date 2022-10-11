@@ -7,7 +7,7 @@ import CorrectAnswer from '../CorrectAnswer/CorrectAnswer';
 const QuizDetails = ({qs}) => {
   
   const {id, options,question,correctAnswer} = qs;
-  console.log(options);
+  // console.log(options);
   
   const [show, setShow] = useState('');
   const showAnswer=()=>{
@@ -49,16 +49,16 @@ const QuizDetails = ({qs}) => {
        
 
         <div className='flex items-center '>
-       <input onClick={compareAns}  type="radio" name="radio-3" className="radio radio-secondary" checked /><p className='mx-4'>{options[0]}</p> 
+       <input onClick={compareAns}  type="radio" name="radio-3" className="radio radio-secondary"  /><p className='mx-4'>{options[0]}</p> 
        </div>
        <div className='flex items-center '>
-       <input onClick={compareAns} type="radio" name="radio-3" className="radio radio-secondary" checked /><p className='mx-4'>{options[1]}</p> 
+       <input onClick={compareAns} type="radio" name="radio-3" className="radio radio-secondary"  /><p className='mx-4'>{options[1]}</p> 
        </div>
        <div className='flex items-center '>
-       <input onClick={compareAns} type="radio" name="radio-3" className="radio radio-secondary" checked /><p className='mx-4'>{options[2]}</p> 
+       <input onClick={compareAns} type="radio" name="radio-3" className="radio radio-secondary"  /><p className='mx-4'>{options[2]}</p> 
        </div>
        <div className='flex items-center '>
-       <input onClick={compareAns} type="radio" name="radio-3" className="radio radio-secondary" checked /><p className='mx-4'>{options[3]}</p> 
+       <input onClick={compareAns} type="radio" name="radio-3" className="radio radio-secondary" /><p className='mx-4'>{options[3]}</p> 
        </div>
      
         </div>
