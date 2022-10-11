@@ -14,30 +14,29 @@ const QuizDetails = ({qs}) => {
     setShow(<h3 className='text-3xl font-bold  bg-sky-100 py-3 rounded-lg text-red-400'> Answer: {correctAnswer} </h3>);
 
   }
- const [compare, setCompare] = useState('');
 
- const compareAns = ()=>{
-  const value1 = options[0];
-  const value2 = options[1];
-  const value3= options[2];
-  const value4= options[3];
-  console.log(value4)
- 
-  
-  if(value4 === correctAnswer){
-    alert ('correct');
-   
-  }
-  else{
-    alert('wrong answer');
-  }
 
- }
+  const [message, setMessage] = useState('');
+
+  const handleChange = event => {
+    if(event.target.value === correctAnswer){
+      alert('correct answer');
+    }
+    else{
+      alert('Wrong answer');
+    }
+    setMessage(event.target.value);
+
+    console.log('value is:', event.target.value);
+  };
+
+
+
 
   
 
   return (
-    <div className='border shadow-2xl m-10 p-10 rounded-lg'>
+    <div className='border shadow-2xl m-10 p-10 rounded-lg container mx-auto'>
       
       <h1 className='text-3xl font-bold flex justify-between pr-5 mr-5'>Question: {question} ;
 
@@ -45,28 +44,28 @@ const QuizDetails = ({qs}) => {
       
       </h1>
      
-       <div className='grid lg:grid-cols-2 md:grid-cols-1 container mx-auto  text-2xl py-10 gap-8 '>
+       <div className='grid lg:grid-cols-2 md:grid-cols-1 container mx-auto w-full text-2xl md:text-1xl p-10 text-center gap-5 '>
        
 
-        <div className='flex items-center '>
-       <input onClick={compareAns}  type="radio" name="radio-3" className="radio radio-secondary"  /><p className='mx-4'>{options[0]}</p> 
+        <div className='flex  '>
+       <input className='border shadow-md bg-sky-50 hover:bg-sky-400 p-8  rounded lg:w-full md:6/12' onClick={handleChange}  type="button" value={options[0]} name="radio-3"   />
        </div>
-       <div className='flex items-center '>
-       <input onClick={compareAns} type="radio" name="radio-3" className="radio radio-secondary"  /><p className='mx-4'>{options[1]}</p> 
+       <div className=' '>
+       <input className='border shadow-md bg-sky-50 hover:bg-sky-400 p-8 rounded w-full' onClick={handleChange} type="button" value={options[1]} name="radio-3"  />
        </div>
-       <div className='flex items-center '>
-       <input onClick={compareAns} type="radio" name="radio-3" className="radio radio-secondary"  /><p className='mx-4'>{options[2]}</p> 
+       <div className=''>
+       <input className='border shadow-md bg-sky-50 hover:bg-sky-400 p-8 rounded w-full ' onClick={handleChange} type="button" value={options[2]} name="radio-3" />
        </div>
-       <div className='flex items-center '>
-       <input onClick={compareAns} type="radio" name="radio-3" className="radio radio-secondary" /><p className='mx-4'>{options[3]}</p> 
+       <div className=' '>
+       <input className='border shadow-md bg-sky-50 hover:bg-sky-400 p-8 rounded w-full' onClick={handleChange} type="button" name="radio-3" value={options[3]} />
        </div>
      
         </div>
         {show}
         
         
-    
     </div>
+   
       
       
    
