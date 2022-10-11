@@ -45,12 +45,12 @@ const Home = () => {
       
 
    
-    <div className='bg-sky-100 p-10' >
+    <div className='bg-sky-100' >
 
       
      
       
-      <div className='w-4/5 lg:w-full container mx-auto  grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2  gap-10 m-10'>
+      <div className='w-4/5 lg:w-full container mx-auto  grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2  gap-5 pt-10'>
       {
         qzTopics.map(quiz=><HomeDetails key={quiz.id} quiz={quiz}></HomeDetails>)
       }
