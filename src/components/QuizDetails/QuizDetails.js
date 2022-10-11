@@ -2,7 +2,7 @@
 import { EyeIcon } from '@heroicons/react/24/solid'
 import { useState } from 'react';
 
-import CorrectAnswer from '../CorrectAnswer/CorrectAnswer';
+
 
 const QuizDetails = ({qs}) => {
   
@@ -20,14 +20,14 @@ const QuizDetails = ({qs}) => {
 
   const handleChange = event => {
     if(event.target.value === correctAnswer){
-      alert('correct answer');
+     alert('Correct Answer')
     }
     else{
       alert('Wrong answer');
     }
     setMessage(event.target.value);
 
-    console.log('value is:', event.target.value);
+    // console.log('value is:', event.target.value);
   };
 
 
@@ -36,28 +36,28 @@ const QuizDetails = ({qs}) => {
   
 
   return (
-    <div className='border shadow-2xl m-10 p-10 rounded-lg container mx-auto'>
+    <div className='border shadow-2xl m-10 p-10 rounded-lg w-5/6 mx-auto '>
       
-      <h1 className='text-3xl font-bold flex justify-between pr-5 mr-5'>Question: {question} ;
+      <h1 className='w-5/6 mx-auto text-1xl lg:text-3xl font-bold flex justify-between pr-5 mr-5'>Question: {question} ;
 
       <button onClick={showAnswer}><EyeIcon className='flex h-6 w-6 text-gray-500'></EyeIcon></button>
       
       </h1>
      
-       <div className='grid lg:grid-cols-2 md:grid-cols-1 container mx-auto w-full text-2xl md:text-1xl p-10 text-center gap-5 '>
+       <div className='grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 mx-auto w-full  p-10  gap-5 '>
        
 
-        <div className='flex  '>
-       <input className='border shadow-md bg-sky-50 hover:bg-sky-400 p-8  rounded lg:w-full md:6/12' onClick={handleChange}  type="button" value={options[0]} name="radio-3"   />
+        <div >
+       <input className='border shadow-md bg-sky-50 hover:bg-sky-400 p-8 whitespace-normal  rounded w-full text-1xl' onClick={handleChange}  type="button" value={options[0]} name="radio-3"   />
        </div>
-       <div className=' '>
-       <input className='border shadow-md bg-sky-50 hover:bg-sky-400 p-8 rounded w-full' onClick={handleChange} type="button" value={options[1]} name="radio-3"  />
+       <div>
+       <input className='border shadow-md bg-sky-50 hover:bg-sky-400 p-8 whitespace-normal rounded w-full' onClick={handleChange} type="button" value={options[1]} name="radio-3"  />
        </div>
-       <div className=''>
-       <input className='border shadow-md bg-sky-50 hover:bg-sky-400 p-8 rounded w-full ' onClick={handleChange} type="button" value={options[2]} name="radio-3" />
+       <div>
+       <input id='box' className='border shadow-md bg-sky-50 hover:bg-sky-400 p-8 whitespace-normal rounded w-full ' onClick={handleChange} type="button" value={options[2]} name="radio-3" />
        </div>
-       <div className=' '>
-       <input className='border shadow-md bg-sky-50 hover:bg-sky-400 p-8 rounded w-full' onClick={handleChange} type="button" name="radio-3" value={options[3]} />
+       <div>
+       <input className='border shadow-md bg-sky-50 hover:bg-sky-400 p-8 whitespace-normal rounded w-full' onClick={handleChange} type="button" name="radio-3" value={options[3]} />
        </div>
      
         </div>

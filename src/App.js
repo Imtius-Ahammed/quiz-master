@@ -32,8 +32,8 @@ function App() {
         },
       
         {
-          path:'/topics',
-          element:<Topics></Topics>
+          path:'*',
+          element:<div>Topics not Found</div>
         },
         {
           path:'/statistics',

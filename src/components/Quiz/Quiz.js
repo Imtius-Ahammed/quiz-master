@@ -6,11 +6,11 @@ const Quiz = () => {
   const quizDetails = useLoaderData();
   const qz = quizDetails.data
   console.log(qz)
-  const { id, questions}=qz;
+  const { total, questions}=qz;
  
   return (
     <div>
-      <h1>This is quiz {id}</h1>
+      <h1 className='text-2xl font-bold p-8 bg-sky-200'>Total Questions : {total}</h1>
       <p>{questions.map(qs=><QuizDetails key={qs.id} qs={qs}></QuizDetails>)}</p>
       
     </div>

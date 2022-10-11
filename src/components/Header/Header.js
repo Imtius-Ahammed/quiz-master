@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
+    
     <div>
              <div className="navbar bg-sky-100">
   <div className="navbar-start">

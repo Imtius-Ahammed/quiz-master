@@ -11,7 +11,7 @@ const HomeDetails = ({quiz}) => {
   return (
     <div>
       <div className=" border p-3 card card-compact w-96 shadow-xl">
-  <figure><img className='bg-blue-50 ' src={logo} alt="Shoes" /></figure>
+  <figure><img className='bg-blue-100 ' src={logo} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">{name}</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
