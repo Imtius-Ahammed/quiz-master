@@ -6,6 +6,7 @@ const HomeDetails = ({quiz}) => {
   const{name,logo,id} = quiz;
   
   
+  
   return (
     <div>
       <div className=" border p-3 card card-compact w-96 shadow-xl">
@@ -14,7 +15,7 @@ const HomeDetails = ({quiz}) => {
     <h2 className="card-title">{name}</h2>
     <p>If a dog chews shoes whose shoes does he choose?</p>
     <div className="card-actions justify-end">
-      <Link to={`/hd/${id}`}><button className="btn btn-primary">Start Practice <ArrowRightIcon className="h-5 w-5  text-white"></ArrowRightIcon> </button></Link>
+      <Link to={`/quiz/${id}`}><button className='btn btn-primary'>Start Practice <ArrowRightIcon className="h-5 w-5  text-white"></ArrowRightIcon> </button></Link>
     </div>
   </div>
 </div>
